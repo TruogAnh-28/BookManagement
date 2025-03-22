@@ -16,6 +16,7 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 ## Technology Stack
 
 ### Frontend
+
 - **Vue.js 3**: Progressive JavaScript framework
 - **TypeScript**: Type-safe JavaScript
 - **Tailwind CSS**: Utility-first CSS framework
@@ -23,6 +24,7 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 - **Vite**: Next generation frontend tooling
 
 ### Backend
+
 - **FastAPI**: Modern, fast (high-performance) web framework for building APIs
 - **SQLAlchemy**: SQL toolkit and Object-Relational Mapping
 - **PostgreSQL**: Advanced open-source relational database
@@ -35,10 +37,12 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 ├── backend/
 │   ├── database.py      # Database connection and session management
 │   ├── main.py          # FastAPI application initialization
-│   ├── models.py        # SQLAlchemy ORM models
+│   ├── model/           # SQLAlchemy ORM models
+│   │   └── books.py     # Book model definition
 │   ├── routers/         # API endpoints
 │   │   └── books.py     # Book-related endpoints (CRUD operations)
-│   └── schemas.py       # Pydantic schemas for request/response models
+│   └── schema/          # Pydantic schemas
+│       └── books.py     # Book schemas for request/response models
 ├── frontend/
 │   ├── public/          # Static assets
 │   ├── src/
@@ -64,19 +68,21 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 1. Clone the repository
 
 2. Set up the backend:
+
    ```bash
    cd backend
    pip install -r requirements.txt
    ```
 
 3. Set up the frontend:
+
    ```bash
    cd frontend
    npm install
    ```
 
 4. Configure environment variables:
-   Create a `.env` file in the backend directory with:
+   Add a `.env` file in the backend directory with:
    ```
    DATABASE_URL=postgresql://username:password@localhost/books_db
    ```
@@ -84,12 +90,14 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 ### Running the Application
 
 1. Start the backend server:
+
    ```bash
    cd backend
    python main.py
    ```
 
 2. Start the frontend development server:
+
    ```bash
    cd frontend
    npm run dev
@@ -104,12 +112,3 @@ A comprehensive book management application with Vue 3 frontend and FastAPI back
 - `POST /api/books`: Create a new book
 - `PUT /api/books/{id}`: Update an existing book
 - `DELETE /api/books/{id}`: Delete a book
-
-## Future Enhancements
-
-- User authentication and personal book collections
-- Book rating system
-- Book cover image uploads
-- Export/import book data
-- Dark mode support"# BookManagement" 
-"# BookManagement" 
